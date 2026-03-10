@@ -1,0 +1,45 @@
+@import 'tailwindcss';
+
+@theme {
+  /* Trail Green Color Palette - urban cycling / riverside theme */
+  --color-trail-50:  #f0fdf4;
+  --color-trail-100: #dcfce7;
+  --color-trail-200: #bbf7d0;
+  --color-trail-300: #86efac;
+  --color-trail-400: #4ade80;
+  --color-trail-500: #22c55e;
+  --color-trail-600: #16a34a;
+  --color-trail-700: #15803d;
+  --color-trail-800: #166534;
+  --color-trail-900: #14532d;
+
+  /* Custom Font Families */
+  --font-family-sans: 'Inter', system-ui, sans-serif;
+  --font-family-serif: 'Merriweather', Georgia, serif;
+}
+
+/* Utility class for screen readers only */
+@layer utilities {
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+
+  .focus\:not-sr-only:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    padding: inherit;
+    margin: inherit;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+  }
+}
