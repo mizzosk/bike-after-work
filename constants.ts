@@ -51,7 +51,8 @@ export const BRIDGES: Bridge[] = [
       'Lafranconi spent decades improving Danube flood defences around Bratislava',
     ],
     // Photo: Wikimedia Commons, CC BY-SA
-    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/9/9c/Most_lafranconi.jpg',
+    //imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/9/9c/Most_lafranconi.jpg',
+    imageUrl: `${import.meta.env.BASE_URL}lafranconi.png`,
   },
   {
     id: 'apollo',
@@ -70,6 +71,7 @@ export const BRIDGES: Bridge[] = [
       'Designed by Slovak engineering firm Doprastav',
     ],
     // Photo: Wikimedia Commons, CC BY-SA
-    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/8/87/Most_Apollo_Bratislava.jpg',
+    //imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/8/87/Most_Apollo_Bratislava.jpg',
+    imageUrl: `${import.meta.env.BASE_URL}apollo.png`,
   },
 ];
