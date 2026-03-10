@@ -10,7 +10,7 @@ export const RIDE: RideInfo = {
   estimatedDurationH: 1.0,
   ascentM: 30,
   // Add Mapy.cz embed HTML here: go to mapy.cz → Share → Embed map → copy <iframe> HTML
-  mapEmbedHtml: '',
+  mapEmbedHtml: '<iframe style="border:none" src="https://mapy.com/s/pehabupefo" width="700" height="466" frameborder="0"></iframe>',
 };
 
 export const STOPS: Stop[] = [
@@ -21,8 +21,7 @@ export const STOPS: Stop[] = [
       'A laid-back bar and buffet sitting directly on the Danube bank — the perfect mid-ride stop for a cold drink before the Lafranconi crossing. Named after the American author who passed through Bratislava on his 1867 European journey, documented in "The Innocents Abroad".',
     type: 'bar',
     address: 'Nábrežie armádneho generála Ludvíka Svobodu, Bratislava',
-    // Add a photo URL here (any publicly accessible image URL)
-    imageUrl: '',
+    imageUrl: `${import.meta.env.BASE_URL}mark_twain.png`,
   },
   {
     id: 'tyrsak',
@@ -31,8 +30,7 @@ export const STOPS: Stop[] = [
       'A multi-purpose sports and events venue on the southern Danube bank, used for outdoor gatherings, sport events, and community activities. Marks the turnaround point on the far bank before the Apollo Bridge return crossing.',
     type: 'event',
     address: 'Tyršovo nábrežie, Bratislava',
-    // Add a photo URL here (any publicly accessible image URL)
-    imageUrl: '',
+    imageUrl: `${import.meta.env.BASE_URL}tyrsak.png`,
   },
 ];
 
@@ -52,8 +50,8 @@ export const BRIDGES: Bridge[] = [
       'Named after Italian engineer Enrico Lafranconi (1837–1896)',
       'Lafranconi spent decades improving Danube flood defences around Bratislava',
     ],
-    // Add a photo URL here (any publicly accessible image URL)
-    imageUrl: '',
+    // Photo: Wikimedia Commons, CC BY-SA
+    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/9/9c/Most_lafranconi.jpg',
   },
   {
     id: 'apollo',
@@ -71,7 +69,7 @@ export const BRIDGES: Bridge[] = [
       'Named after the nearby Apollo oil refinery, bombed by Allied forces on 16 June 1944',
       'Designed by Slovak engineering firm Doprastav',
     ],
-    // Add a photo URL here (any publicly accessible image URL)
-    imageUrl: '',
+    // Photo: Wikimedia Commons, CC BY-SA
+    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/8/87/Most_Apollo_Bratislava.jpg',
   },
 ];
