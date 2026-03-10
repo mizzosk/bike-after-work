@@ -12,8 +12,8 @@ export interface Stop {
   type: 'bar' | 'event';
   /** Street address or landmark description */
   address: string;
-  /** Full iframe HTML string for the embedded Mapy.cz map — empty string shows placeholder */
-  mapEmbedHtml: string;
+  /** URL of a photo to display — empty string shows placeholder */
+  imageUrl: string;
 }
 
 /**
@@ -34,8 +34,8 @@ export interface Bridge {
   history: string;
   /** Array of short fact strings */
   facts: string[];
-  /** Full iframe HTML string for the embedded Mapy.cz map — empty string shows placeholder */
-  mapEmbedHtml: string;
+  /** URL of a photo to display — empty string shows placeholder */
+  imageUrl: string;
 }
 
 /**

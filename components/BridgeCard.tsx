@@ -1,6 +1,5 @@
-import { Calendar, Ruler, Landmark, Map } from 'lucide-react';
+import { Calendar, Ruler, Landmark, Image as ImageIcon } from 'lucide-react';
 import type { Bridge } from '@/types';
-import { getIframeSrc } from '@/utils/maps';
 
 interface Props {
   bridge: Bridge;
@@ -14,7 +13,6 @@ const CROSSING_LABELS: Record<number, string> = {
 };
 
 export const BridgeCard: React.FC<Props> = ({ bridge, crossingOrder }) => {
-  const mapSrc = getIframeSrc(bridge.mapEmbedHtml);
   const crossingLabel = CROSSING_LABELS[crossingOrder] ?? `Crossing ${crossingOrder}`;
 
   return (
@@ -83,27 +81,20 @@ export const BridgeCard: React.FC<Props> = ({ bridge, crossingOrder }) => {
           </div>
         </div>
 
-        {/* Map */}
-        {mapSrc ? (
-          <div className="w-full aspect-[4/3] md:aspect-[2/1] relative group rounded-xl overflow-hidden border border-stone-100">
-            <iframe
-              src={mapSrc}
-              className="absolute top-0 left-0 w-full h-full grayscale-[20%] hover:grayscale-0 transition-all duration-500"
-              style={{ border: 'none' }}
-              loading="lazy"
-              title={`Map of ${bridge.name}`}
-              sandbox="allow-scripts allow-same-origin allow-popups"
-            />
-            <div className="absolute bottom-4 right-4 bg-white/90 px-3 py-1 text-xs text-stone-500 rounded backdrop-blur opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-              Scroll to zoom
-            </div>
-          </div>
+        {/* Photo */}
+        {bridge.imageUrl ? (
+          <img
+            src={bridge.imageUrl}
+            alt={bridge.name}
+            className="w-full aspect-[4/3] md:aspect-[2/1] object-cover rounded-xl"
+            loading="lazy"
+          />
         ) : (
-          <div className="w-full aspect-[4/3] md:aspect-[2/1] bg-stone-50 rounded-xl border border-stone-200 border-dashed flex flex-col items-center justify-center gap-2">
-            <Map className="w-6 h-6 text-stone-300" />
+          <div className="w-full aspect-[4/3] md:aspect-[2/1] bg-stone-100 rounded-xl border border-stone-200 border-dashed flex flex-col items-center justify-center gap-2">
+            <ImageIcon className="w-6 h-6 text-stone-300" />
             <p className="text-stone-400 text-xs">
-              Map coming soon — add Mapy.cz embed URL to{' '}
-              <code className="text-stone-500 bg-stone-100 px-1 rounded">constants.ts</code>
+              Add photo URL to{' '}
+              <code className="text-stone-500 bg-stone-200 px-1 rounded">constants.ts</code>
             </p>
           </div>
         )}

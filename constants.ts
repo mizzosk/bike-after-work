@@ -21,8 +21,8 @@ export const STOPS: Stop[] = [
       'A laid-back bar and buffet sitting directly on the Danube bank — the perfect mid-ride stop for a cold drink before the Lafranconi crossing. Named after the American author who passed through Bratislava on his 1867 European journey, documented in "The Innocents Abroad".',
     type: 'bar',
     address: 'Nábrežie armádneho generála Ludvíka Svobodu, Bratislava',
-    // Add Mapy.cz embed HTML here
-    mapEmbedHtml: '',
+    // Add a photo URL here (any publicly accessible image URL)
+    imageUrl: '',
   },
   {
     id: 'tyrsak',
@@ -31,8 +31,8 @@ export const STOPS: Stop[] = [
       'A multi-purpose sports and events venue on the southern Danube bank, used for outdoor gatherings, sport events, and community activities. Marks the turnaround point on the far bank before the Apollo Bridge return crossing.',
     type: 'event',
     address: 'Tyršovo nábrežie, Bratislava',
-    // Add Mapy.cz embed HTML here
-    mapEmbedHtml: '',
+    // Add a photo URL here (any publicly accessible image URL)
+    imageUrl: '',
   },
 ];
 
@@ -52,8 +52,8 @@ export const BRIDGES: Bridge[] = [
       'Named after Italian engineer Enrico Lafranconi (1837–1896)',
       'Lafranconi spent decades improving Danube flood defences around Bratislava',
     ],
-    // Add Mapy.cz embed HTML here
-    mapEmbedHtml: '',
+    // Add a photo URL here (any publicly accessible image URL)
+    imageUrl: '',
   },
   {
     id: 'apollo',
@@ -71,7 +71,7 @@ export const BRIDGES: Bridge[] = [
       'Named after the nearby Apollo oil refinery, bombed by Allied forces on 16 June 1944',
       'Designed by Slovak engineering firm Doprastav',
     ],
-    // Add Mapy.cz embed HTML here
-    mapEmbedHtml: '',
+    // Add a photo URL here (any publicly accessible image URL)
+    imageUrl: '',
   },
 ];
